@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5500/success.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Success Message</title>
+	<style>
+		body {
+            background-image: url("see.jpg");;
+
+			font-family: Arial, sans-serif;
+		}
+		
+		.success {
+			background-color: #dff0d8;
+			color: #3c763d;
+			padding: 10px 20px;
+			border-radius: 5px;
+			margin: 50px auto;
+			text-align: center;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+			max-width: 500px;
+			width: 70%;
+			height: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		h1 {
+			font-size: 32px;
+			margin: 0 0 20px;
+		}
+		
+		p {
+			font-size: 20px;
+			margin: 0;
+		}
+		
+		button {
+            
+			background-color: #3c763d;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-top: 20px;
+            width: 200px; 
+            height: 40px; 
+		}
+		
+		button:hover {
+			background-color: #2b5d2e;
+		}
+	</style>
+</head>
+<body>
+	<div class="success">
+		<h1>Success!</h1>
+		<p>Your Registration form has been submitted.</p>
+		<button>OK</button>
+	</div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
